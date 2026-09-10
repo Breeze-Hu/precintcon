@@ -71,7 +71,7 @@ precintcon.plot.lorenz <- function(
 			data <- data[order(data$s), ]
 
 			plot <- ggplot(data) +
-					geom_ribbon(aes_string(x="x", ymin="y", ymax="x", colour=factor("dataset", levels=unique("dataset")),
+					geom_ribbon(aes(x=x, ymin=y, ymax=x, colour=factor("dataset", levels=unique("dataset")),
 						fill=factor("dataset", levels=unique("dataset")), linetype=NA), alpha=.3) + 
 					xlab(xlab) + ylab(ylab) +
 					theme(text = element_text(size=fontsize), 
