@@ -69,7 +69,7 @@ precintcon.plot.histogram <- function(
 			g <- function(d, n, 
 					density, ylab, xlab, export.name, export, width, height, units) {	
 
-				graph <- ggplot(d, aex(x = x)) + 
+				graph <- ggplot(d, aes(x = x)) + 
 					(if (!density) geom_histogram() else geom_density(fill = 'grey', alpha = .3, show_guide = F)) + 
 					xlab(xlab) + ylab(ylab) +
 					theme(text = element_text(size = fontsize),  
