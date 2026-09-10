@@ -44,7 +44,7 @@ precintcon.plot.deciles <- function(...,
          d <- as.precintcon.deciles(d)
          
          graph <- ggplot(d) + 
-               geom_boxplot(aes_string(x = "dataset", ymin = "D1", lower = "D2",
+               geom_boxplot(aes(x = "dataset", ymin = "D1", lower = "D2",
                            middle = "D5", upper = "D9", ymax = "D10"), stat = "identity", show.legend = FALSE) +
                ylab(ylab) +
                theme(text = element_text(size = fontsize), 
