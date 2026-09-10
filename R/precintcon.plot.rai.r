@@ -89,7 +89,7 @@ p.plot.rai <- function(d, n, g,
       stop("invalid granularity value. It should be either 'a' for annual or 'm' for monthly")
     }
     
-    p <- ggplot(data, aes_string(x = "x", y = "y")) + geom_bar(stat = "identity", position = "identity") +  
+    p <- ggplot(data, aes(x = x, y = y)) + geom_bar(stat = "identity", position = "identity") +  
       xlab(xlab) + ylab(ylab) + 
       scale_x_date(expand = c(1/48, 1/48), 
                    limits = as.Date(c(data[1, 1], tail(data$x, n = 1))), 

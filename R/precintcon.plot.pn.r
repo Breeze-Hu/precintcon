@@ -48,7 +48,7 @@ precintcon.plot.pn <- function(
 				if (is.na(xlab))
 					xlab <- "Year"
 				
-				graph <- ggplot(d, aes_string("year", "pn")) + geom_point(size=2) +
+				graph <- ggplot(d, aes(x = year, y = pn)) + geom_point(size=2) +
 					scale_x_continuous(expand = c(.02, .02), breaks = seq(min(d$year), max(d$year), by = 2))
 			
 			} else {
@@ -75,7 +75,7 @@ precintcon.plot.pn <- function(
 							date = as.Date(paste("01", ddd, d$year, sep = "/"), "%d/%m/%Y")));
 
 				graph <- 
-					ggplot(d, aes_string("date", "pn")) + geom_point(size = 1.1) +
+					ggplot(d, aes(x = date, y = pn)) + geom_point(size = 1.1) +
 					scale_x_date(labels = date_format("%b %y"))
 			}
 			

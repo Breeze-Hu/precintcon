@@ -73,7 +73,7 @@ p.plot.spi <- function(d, n,
 			x = as.Date(paste(d[ ,1], d[ ,2], "01", sep = "/"), "%Y/%m/%d"), 
 			y = d[ ,3], dataset = paste(n, sep=""))
 		
-		p <- ggplot(data) + geom_line(aes_string(x = "x", y = "y"), size = .3) + 
+		p <- ggplot(data) + geom_line(aes(x = x, y = y), size = .3) + 
 				xlab(xlab) + ylab(ylab) + 
 				scale_x_date(expand = c(1/48, 1/48), 
 						limits = as.Date(c(data[1,1], tail(data$x, n = 1))), 

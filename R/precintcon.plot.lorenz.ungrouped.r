@@ -52,9 +52,9 @@ precintcon.plot.lorenz.ungrouped <-
 	x <- cbind(data.frame(dataset = paste(n)), x)
 
 	p <- ggplot(data = x) +  
-		 geom_line(data = data.frame(x = seq(0, 1, by=.1)), aes_string(x = "x", y = "x")) +
-		 geom_line(aes_string(x = "p.sum.n", y = "p.sum.P")) +
-		 geom_ribbon(aes_string(x = "p.sum.n", ymin = "p.sum.P", ymax = "p.sum.n"), alpha = .3) +
+		 geom_line(data = data.frame(x = seq(0, 1, by=.1)), aes(x = x, y = x)) +
+		 geom_line(aes(x = p.sum.n, y = p.sum.P)) +
+		 geom_ribbon(aes(x = p.sum.n, ymin = p.sum.P, ymax = p.sum.n), alpha = .3) +
 		 xlab(xlab) + ylab(ylab) +  facet_grid(. ~ dataset) +
 		 theme(text = element_text(size=fontsize), 
 				 axis.text = element_text(color = axis.text.color),

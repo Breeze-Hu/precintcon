@@ -45,7 +45,7 @@ precintcon.plot.pci <- function(
 		
 				d <- cbind(d, data.frame(dataset=paste(n)))
 			
-				graph <- ggplot(d, aes_string("year", "pci")) + geom_line(size=.5) +
+				graph <- ggplot(d, aes(x = year, y = pci)) + geom_line(size=.5) +
 					geom_point(size=2) + xlab(xlab) + ylab(ylab) +
 					theme(text = element_text(size = fontsize), 
 							axis.text = element_text(color = axis.text.color),
