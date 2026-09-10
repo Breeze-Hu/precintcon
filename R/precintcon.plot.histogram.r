@@ -70,7 +70,7 @@ precintcon.plot.histogram <- function(
 					density, ylab, xlab, export.name, export, width, height, units) {	
 
 				graph <- ggplot(d, aex(x = x)) + 
-					(if (!density) geom_histogram() else geom_density(fill = "grey", alpha = .3, show_guide = F)) + 
+					(if (!density) geom_histogram() else geom_density(fill = 'grey', alpha = .3, show_guide = F)) + 
 					xlab(xlab) + ylab(ylab) +
 					theme(text = element_text(size = fontsize),  
 						  axis.text = element_text(color = axis.text.color)) + 
@@ -101,7 +101,7 @@ precintcon.plot.histogram <- function(
 			#
 			l <- do.call(rbind.data.frame, l)
 			
-			graph <- ggplot(l, aes(x = x, fill = "dataset")) + 
+			graph <- ggplot(l, aes(x = x, fill = dataset)) + 
 					 (if (!density) geom_histogram() else geom_density(alpha = .3)) + 
 					 xlab(xlab) + ylab(ylab) +
 					 scale_fill_discrete(legend.title) +
