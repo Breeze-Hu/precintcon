@@ -1,8 +1,8 @@
 Package: precintcon
 Type: Package
 Title: Precipitation Intensity, Concentration and Anomaly Analysis
-Version: 2.3.0
-Date: 2016-05-26
+Version: 2.3.1
+Date: 2026-09-10
 LazyData: true
 Author: Lucas Venezian Povoa  [aut, cre],
     Jonas Teixeira Nery [ctb]
@@ -12,8 +12,8 @@ Description: It contains functions to analyze the precipitation
 URL: https://github.com/lucasvenez/precintcon
 BugReports: https://github.com/lucasvenez/precintcon/issues
 Depends:
-    R (>= 2.14),
-    ggplot2 (>= 2.0.0),
+    R (>= 4.1),
+    ggplot2 (>= 4.0.0),
     scales
 License: GPL (>= 2)
 Collate:
