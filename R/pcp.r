@@ -52,7 +52,7 @@
 #   return(r)
 # }
 
-pcp_fixed <- function(object) {
+pcp <- function(object) {
 
   if (inherits(object, "precintcon.daily")) {
     object <- as.precintcon.monthly(object)
